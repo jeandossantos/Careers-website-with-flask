@@ -1,0 +1,37 @@
+<h3>Application Form</h3>
+
+<form style="width: 350px;" action="/job/{{job.id}}/apply" method="post">
+  <div class="mb-3">
+    <label class="form-label" for="full_name" >Full Name:</label>
+    <input class="form-control" type="text" id="full_name" name="full_name"
+      placeholder="Ex: John Doe"/>
+  </div>
+  
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" name="email" id="email" aria-describedby="emailHelp" placeholder="Ex: johndoe@hello.com" class="form-control" >
+  </div>
+
+  <div class="mb-3">
+    <label for="linkedin_url" class="form-label">LinkendIn</label>
+    <input type="text" class="form-control" id="linkedin_url" name="linkedin_url" placeholder="Ex: https://linked.com/In/brucewayne.com">
+  </div>
+
+  <div class="mb-3">
+    <label for="education" class="form-label">Education</label>
+    <textarea class="form-control" id="education" name="education" rows="3"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="work_experience" class="form-label">Work Experience</label>
+    <textarea class="form-control" id="work_experience" name="work_experience" rows="3">    </textarea>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label" for="resume_url" >Resume Link:</label>
+    <input class="form-control" type="text" id="resume_url" name="resume_url"
+      placeholder=""/>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

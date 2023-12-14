@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include 'global.html' %}
+    <title>Applyment info - Jovian Careers</title>
+  </head>
+
+  <body>
+    {% include 'navbar.html' %}
+    <div class="container">
+      
+      <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
+    <div class="alert alert-info" role="alert">
+      Your application for the Job <b>"{{job.title}}"</b> has been submitted!
+    </div>
+      
+      <p class="mb-0"><b>Full Name</b></p>
+      <p>{{application.full_name}}</p>
+      
+        <p class="mb-0"><b>E-mail</b></p>
+      <p>{{application.email}}</p>
+
+      <p class="mb-0"><b>LinkedIn</b></p>
+      <p>{{application.linkedin_url}}</p>
+
+      <p class="mb-0"><b>Education</b></p>
+      <p>{{application.education}}</p>
+
+      <p class="mb-0"><b>Work Experience</b></p>
+      <p>{{application.work_experience}}</p>
+
+      <p class="mb-0"><b>Resume Link</b></p>
+      <p>{{application.resume_url}}</p>
+
+    </div>
+      {% include 'footer.html' %}
+  </body>
+</html>
