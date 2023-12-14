@@ -1,0 +1,38 @@
+<html>
+  <head>
+    {% include 'global.html' %}
+
+    <title>{{job.title}} - Coreers Jovian</title>    
+  </head>
+  <body>
+    {% include 'navbar.html'%}
+    {% include 'banner.html' %}
+
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
+      
+      <h3 class="mb-2">{{job.title}}</h3>  
+      
+      <p class="lead mt-0">{{job.location}}</p>
+  
+      <h3>Salary</h3>
+      <p>{{job.currency}}{{job.salary}}</p>
+  
+      <h3>Responsibilities</h3>
+      <ul>
+          {% for responsibility in job.responsibilities.split("\n") %}
+            <li>{{responsibility}}</li>
+          {% endfor %}
+      </ul>
+      <h3>Requirements</h3>
+      <ol>
+          {% for requirement in job.requirements.split("\n") %}
+            <li>{{requirement}}</li>
+          {% endfor %}
+      </ol>
+  
+    </div>
+    
+    {% include 'footer.html'%}
+  </body>
+</html>
