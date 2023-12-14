@@ -1,6 +1,7 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, request
 
 from database.job_repository import load_job_from_db, load_jobs_from_db
+from database.application_repository import add_application_to_db
 
 app = Flask(__name__)
 
@@ -26,6 +27,16 @@ def show_job(id):
     
   return render_template('job-page.html', job=job)
 
+@app.route("/job/<id>/apply", methods=['post'])
+def apply_to_job(id):
+  data = request.form
+  job = load_job_from_db(id)
+  
+  #save into database
+  add_application_to_db(id, data)
+
+  return render_template('application_submited.html', application=data, job=job)
+  
 #-------- API ROUTES ---------
 
 
