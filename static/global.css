@@ -1,0 +1,71 @@
+
+
+body {
+  background-color: rgb(2 2 2);
+}
+
+/* Barra de rolagem do Google Chrome / WebKit */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+}
+
+/* Cor de fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background-color: #4e5255; /* Cor de fundo */
+}
+
+/* Cor do indicador da barra de rolagem (a "bolinha") */
+::-webkit-scrollbar-thumb {
+    background-color: #6c757d; /* Cor do indicador */
+}
+
+
+* {
+  color: rgb(200, 195, 188);   
+}
+
+nav.navbar {
+    background-color: rgb(15, 16, 17) !important;
+}
+
+.border-bottom-custom {
+    border-bottom: 1px solid rgb(120, 112, 99) !important;
+}
+
+.navbar-brand {
+    color:  #e8e6e3;
+    text-decoration-color: initial;
+}
+
+.alert-info {
+  background-color: rgb(6, 85, 100);
+  border: 1px solid #086a7d;
+}
+
+.form-control {
+    color: #d1cdc7;
+    border: 1px solid #383d3f;
+  background-color: rgb(20 20 20 / 85%)
+}
+
+.form-control::placeholder {
+  color: #5c5c5c !important;
+}
+ 
+.form-control:focus {
+    color: #d1cdc7;
+    background-color: #181a1b;
+    border-color: rgb(1, 57, 137);
+    outline-color: initial;
+    box-shadow: rgba(2, 80, 196, 0.25) 0px 0px 0px 0.25rem;
+}
+
+.nav-link {
+  color: #d1cdc7;
+}
+
+.nav-link:hover, .navbar-brand:hover {
+  color: #787878;
+}
+/* Mudando a cor do placeholder */
+ 
